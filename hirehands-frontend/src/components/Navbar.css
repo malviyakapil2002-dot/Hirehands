@@ -1,0 +1,55 @@
+.navbar {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 0 28px; height: 64px;
+  background: #fff; border-bottom: 1px solid #e5e5e5;
+  position: sticky; top: 0; z-index: 100;
+}
+.navbar-brand a { font-size: 1.35rem; font-weight: 800; text-decoration: none; color: #111; letter-spacing: -0.5px; }
+.navbar-links { display: flex; align-items: center; gap: 16px; }
+.nav-link { color: #555; font-weight: 600; font-size: 0.9rem; }
+.nav-link:hover { color: #111; }
+
+/* Profile */
+.profile-section { position: relative; }
+.profile-trigger {
+  display: flex; align-items: center; gap: 8px;
+  background: #f5f5f5; border: 1px solid #e5e5e5;
+  padding: 5px 12px 5px 5px; border-radius: 32px;
+  cursor: pointer; transition: all 0.2s; color: #111; font-family: inherit; font-size: 0.88rem;
+}
+.profile-trigger:hover { background: #eee; border-color: #d4d4d4; }
+.profile-avatar { width: 32px; height: 32px; background: #111; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.85rem; color: #fff; }
+.profile-name { font-weight: 600; }
+.profile-role-badge { font-size: 0.62rem; padding: 2px 7px; border-radius: 10px; background: var(--theme-accent-soft); color: var(--theme-primary); font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; }
+.profile-chevron { font-size: 0.65rem; color: #999; transition: transform 0.2s; }
+.profile-chevron.open { transform: rotate(180deg); }
+
+.profile-dropdown {
+  position: absolute; top: calc(100% + 8px); right: 0; width: 240px;
+  background: #fff; border: 1px solid #e5e5e5; border-radius: 12px;
+  box-shadow: 0 12px 36px rgba(0,0,0,0.1); padding: 8px;
+  animation: ddFade 0.15s ease-out; z-index: 200;
+}
+@keyframes ddFade { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: translateY(0); } }
+.dropdown-header { display: flex; align-items: center; gap: 10px; padding: 10px 8px; }
+.dropdown-avatar { width: 38px; height: 38px; background: #111; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1rem; color: #fff; flex-shrink: 0; }
+.dropdown-name { font-weight: 600; color: #111; font-size: 0.9rem; }
+.dropdown-email { font-size: 0.78rem; color: #999; }
+.dropdown-divider { height: 1px; background: #e5e5e5; margin: 4px 0; }
+.dropdown-item { width: 100%; display: flex; align-items: center; gap: 8px; padding: 9px 10px; border: none; background: transparent; color: #555; font-family: inherit; font-size: 0.88rem; font-weight: 500; cursor: pointer; border-radius: 8px; transition: all 0.15s; }
+.dropdown-item:hover { background: #f5f5f5; color: #111; }
+.logout-item:hover { background: #fef2f2; color: #dc2626; }
+
+/* Notification Bell */
+.notification-section { position: relative; }
+.notification-trigger { background: none; border: none; cursor: pointer; font-size: 1.2rem; padding: 6px; position: relative; transition: all 0.2s; border-radius: 8px; }
+.notification-trigger:hover { background: #f5f5f5; }
+.notification-badge-count { position: absolute; top: 0; right: 0; background: #dc2626; color: #fff; font-size: 0.6rem; font-weight: 700; min-width: 16px; height: 16px; border-radius: 8px; display: flex; align-items: center; justify-content: center; padding: 0 4px; }
+.notification-dropdown { position: absolute; top: calc(100% + 8px); right: 0; width: 320px; max-height: 380px; overflow-y: auto; background: #fff; border: 1px solid #e5e5e5; border-radius: 12px; box-shadow: 0 12px 36px rgba(0,0,0,0.1); animation: ddFade 0.15s ease-out; z-index: 200; }
+.notification-dropdown-header { padding: 14px 16px; font-weight: 700; font-size: 0.95rem; border-bottom: 1px solid #e5e5e5; color: #111; }
+.notification-item { padding: 12px 16px; border-bottom: 1px solid #f5f5f5; transition: background 0.15s; cursor: default; }
+.notification-item:hover { background: #f9f9f9; }
+.notification-item:last-child { border-bottom: none; }
+.notification-item p { font-size: 0.85rem; color: #333; margin-bottom: 2px; }
+.notification-item span { font-size: 0.72rem; color: #999; }
+.notification-empty { padding: 28px 16px; text-align: center; color: #999; font-size: 0.85rem; }

@@ -1,0 +1,17 @@
+.modal-overlay {
+  position: fixed; inset: 0; background: rgba(0,0,0,0.4);
+  display: flex; align-items: center; justify-content: center;
+  z-index: 500; animation: modalIn 0.15s ease-out;
+}
+@keyframes modalIn { from { opacity: 0; } to { opacity: 1; } }
+
+.modal-content {
+  width: 100%; max-width: 420px; padding: 28px;
+  animation: modalSlide 0.2s ease-out;
+}
+@keyframes modalSlide { from { transform: translateY(12px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+
+.modal-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+.modal-header h3 { font-size: 1.2rem; }
+.modal-close { background: none; border: none; font-size: 1.2rem; cursor: pointer; color: #999; padding: 4px 8px; border-radius: 6px; transition: all 0.15s; }
+.modal-close:hover { background: #f5f5f5; color: #111; }
